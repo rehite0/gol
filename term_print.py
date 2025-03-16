@@ -1,5 +1,5 @@
 from buff_gen import *
-term={"h":30,"w":80}
+term={"h":350,"w":1900}
 def gol_buff_print(buff):
 	for i in range(term["h"]):
 		for j in range(term["w"]):
