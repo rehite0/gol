@@ -1,10 +1,9 @@
 import random as rand
+import numpy as np
 frac=0.8
-def gol_gen_buff(x,y):
+def gol_gen_buff(h,w):
 	buff=[]
-	for i in range(y):
-		subbuff=[]
-		for j in range(x):
-			subbuff.append(True if rand.random()>frac else False)
-		buff.append(subbuff)
-	return buff
+	for _ in range(h):
+		for _ in range(w):
+			buff.append(1 if rand.random()>frac else 0)
+	return np.array(buff,dtype='int32')
