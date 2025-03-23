@@ -1,14 +1,15 @@
 from buff_gen import *
+from os import system
 def gol_buff_print(buff,h,w):
+    t=open("t.temp","w+")
     for i in range(h):
         for j in range(w):
-            #print(buff)
-            print(buff[i][j],sep="",end="")
-            #print("#" if buff[i][j]==1 else ".",sep="",end="")
-        print()
+            print("#" if buff[i][j]==1 else " ",sep="",end="",file=t)
+        print(file=t)
+    t.close()
+    system("clear && cat t.temp")
 
 if __name__=="__main__":
-    pass
-    #h=350
-    #w=1900
-    #gol_buff_print(gol_gen_buff(w,h),h,w)
+    h=350
+    w=1900
+    gol_buff_print(gol_gen_buff(w,h),h,w)
