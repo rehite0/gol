@@ -1,5 +1,12 @@
 from buff_gen import *
 from os import system
+
+def init_altscr():
+    system('tput smcup')
+    system('tput civis')
+def del_altscr():
+    system('tput rmcup')
+    system('tput cnorm')
 def gol_buff_print(buff,h,w):
     t=open("t.temp","w+")
     for i in range(h):
