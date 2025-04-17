@@ -9,7 +9,7 @@ from buff_gen import *
 from term_print import *
 
 try:
-    h=int(sp.run(["tput","lines"],stdout=sp.PIPE).stdout)
+    h=int(sp.run(["tput","lines"],stdout=sp.PIPE).stdout)-3
     w=int(sp.run(["tput","cols"],stdout=sp.PIPE).stdout)
 except:
     h=30
