@@ -4,6 +4,9 @@ from os import system
 chars=["\u2588"         #█
        ,"\u25a0"        #■
        ,"#"
+       ,"\u2585"
+       ,"\u2740"
+       ,"\u2748"
        ]
 def init_altscr():
     system('tput smcup')
@@ -18,7 +21,7 @@ def gol_buff_print(buff,h,w):
     t=open("t.temp","w+")
     for i in range(h):
         for j in range(w):
-            print(chars[1] if buff[i][j]==1 else " ",sep="",end="",file=t)
+            print(chars[5] if buff[i][j]==1 else " ",sep="",end="",file=t)
         print(file=t)
     t.close()
     system("tput cup 0 0 && cat t.temp")
