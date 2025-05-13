@@ -8,6 +8,7 @@ chars=["\u2588"         #█
        ,"\u2740"
        ,"\u2748"
        ]
+frameno=0
 def init_altscr():
     system('tput smcup')
     system('tput civis')
@@ -18,10 +19,14 @@ def del_altscr():
     system('tput cnorm')
     system('tput sgr0')
 def gol_buff_print(buff,h,w):
+    global frameno
+    frameno+=1
     t=open("t.temp","w+")
     for i in range(h):
         for j in range(w):
-            print(chars[5] if buff[i][j]==1 else " ",sep="",end="",file=t)
+            print(
+                chars[frameno//len(chars)%len(chars)] if buff[i][j]==1 else " "
+                ,sep="",end="",file=t)
         print(file=t)
     t.close()
     system("tput cup 0 0 && cat t.temp")
