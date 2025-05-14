@@ -1,3 +1,4 @@
+#!/usr/bin/env python 
 import subprocess as sp
 from time import sleep
 import numpy as np
