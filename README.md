@@ -1,4 +1,5 @@
 
-https://github.com/user-attachments/assets/2fda92c1-3fc1-4b9c-9b51-a38a1fbd0da3
+
+https://github.com/user-attachments/assets/c12ad5ed-4171-4142-8b89-68611c7bbe37
 # gol
 game of life
