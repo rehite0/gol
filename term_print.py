@@ -25,7 +25,8 @@ def gol_buff_print(buff,h,w):
     for i in range(h):
         for j in range(w):
             print(
-                chars[frameno//len(chars)%len(chars)] if buff[i][j]==1 else " "
+                #chars[frameno//len(chars)%len(chars)] if buff[i][j]==1 else " "
+                chars[1] if buff[i][j]==1 else " "
                 ,sep="",end="",file=t)
         print(file=t)
     t.close()
